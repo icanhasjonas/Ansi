@@ -8,7 +8,7 @@
     <Company>Bombsquad Inc</Company>
     <Product />
     <Description>Simple StringBuilder extensions for adding ansi escape sequences</Description>
-    <PackageTags>StringBuilder Ansi Extensions</PackageTags>
+    <PackageTags>StringBuilder Ansi Extension Color</PackageTags>
     <Copyright>© Bombsquad Inc 2017</Copyright>
     <PackageIconUrl>http://www.gravatar.com/avatar/778137d42770f739df317b3cde5454ed.png?s=128</PackageIconUrl>
     <RepositoryUrl>https://github.com/bmbsqd/ansi</RepositoryUrl>
