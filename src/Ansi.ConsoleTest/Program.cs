@@ -15,7 +15,7 @@ namespace Ansi.ConsoleTest {
 			);
 
 			for( var i = 0;; i++ ) {
-				var color = new Rgb(
+				var color = new AnsiColor(
 					(byte)(128 + Math.Sin( i / 200d ) * 127),
 					(byte)(128 + Math.Sin( i / 100d ) * 127),
 					(byte)(128 + Math.Sin( i / 130d ) * 80) );

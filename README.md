@@ -24,7 +24,7 @@ Console.Write( new StringBuilder()
 
 for( var i = 0;; i++ ) {
 	/* What, ain't monochrome good enough for ya? */
-	var color = new Rgb(
+	var color = new AnsiColor(
 		(byte)(128 + Math.Sin( i / 200d ) * 127),
 		(byte)(128 + Math.Sin( i / 100d ) * 127),
 		(byte)(128 + Math.Sin( i / 130d ) * 80) );
@@ -40,5 +40,14 @@ for( var i = 0;; i++ ) {
 	);
 	Thread.Sleep( 25 );
 }
+```
+
+
+```csharp
+using static Ansi.AnsiFormatter;
+
+Console.WriteLine( Colorize( $"Hello {ConsoleColor.Red} World" );
+Console.WriteLine( Colorize( $"Hello {Rgb(100,20,30)} World" );
+
 ```
 

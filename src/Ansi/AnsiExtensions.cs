@@ -52,7 +52,7 @@ namespace Ansi {
 			.Append( string.Join( ";", modes.Select( x => (int)x ) ) )
 			.Append( 'm' );
 
-		private static StringBuilder SetColorColor( this StringBuilder b, Mode mode, Rgb color ) => b
+		private static StringBuilder SetColorColor( this StringBuilder b, Mode mode, AnsiColor color ) => b
 			.Escape()
 			.Append( '[' )
 			.Append( (byte)mode )
@@ -61,8 +61,8 @@ namespace Ansi {
 			.Append( color.G ).Append( ';' )
 			.Append( color.B ).Append( 'm' );
 
-		public static StringBuilder SetBackgroundColor( this StringBuilder b, Rgb color ) => b.SetColorColor( Mode.SetBackgroundColor, color );
-		public static StringBuilder SetForegroundColor( this StringBuilder b, Rgb color ) => b.SetColorColor( Mode.SetForegroundColor, color );
+		public static StringBuilder SetBackgroundColor( this StringBuilder b, AnsiColor color ) => b.SetColorColor( Mode.SetBackgroundColor, color );
+		public static StringBuilder SetForegroundColor( this StringBuilder b, AnsiColor color ) => b.SetColorColor( Mode.SetForegroundColor, color );
 
 		private static StringBuilder AnsiEscapePrefix( this StringBuilder b, int count ) => b.Escape().Append( '[' ).Append( count );
 		public static StringBuilder Up( this StringBuilder b, int count = 1 ) => b.AnsiEscapePrefix( count ).Append( 'A' );

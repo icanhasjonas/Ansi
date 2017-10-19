@@ -1,10 +1,10 @@
 ﻿namespace Ansi {
-	public struct Rgb {
+	public struct AnsiColor {
 		public byte R;
 		public byte G;
 		public byte B;
 
-		public Rgb( byte r, byte g, byte b )
+		public AnsiColor( byte r, byte g, byte b )
 		{
 			R = r;
 			G = g;
