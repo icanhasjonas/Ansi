@@ -11,9 +11,9 @@
     <PackageTags>StringBuilder Ansi Extension Color</PackageTags>
     <Copyright>© Bombsquad Inc 2017</Copyright>
     <PackageIconUrl>http://www.gravatar.com/avatar/778137d42770f739df317b3cde5454ed.png?s=128</PackageIconUrl>
-    <RepositoryUrl>https://github.com/bmbsqd/ansi</RepositoryUrl>
+    <RepositoryUrl>https://github.com/icanhasjonas/Ansi</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/bmbsqd/ansi</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/icanhasjonas/Ansi</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>1.0.0</Version>
   </PropertyGroup>
