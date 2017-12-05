@@ -1,4 +1,4 @@
-# ansi
+# Ansi
 Ansi extensions for your favourite `StringBuilder`
 
 # Example

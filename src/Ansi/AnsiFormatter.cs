@@ -21,16 +21,15 @@ namespace Ansi {
 			{ConsoleColor.Red, new StringBuilder().SetMode( Mode.ForegroundRed, Mode.Bold ).ToString()},
 			{ConsoleColor.Magenta, new StringBuilder().SetMode( Mode.ForegroundMagenta, Mode.Bold ).ToString()},
 			{ConsoleColor.Yellow, new StringBuilder().SetMode( Mode.ForegroundYellow, Mode.Bold ).ToString()},
-			{ConsoleColor.White, new StringBuilder().SetMode( Mode.ForegroundWhite, Mode.Bold ).ToString()},
+			{ConsoleColor.White, new StringBuilder().SetMode( Mode.ForegroundWhite, Mode.Bold ).ToString()}
 		};
 
 		public static AnsiColor Rgb( byte r, byte g, byte b ) => new AnsiColor( r, g, b );
 
-		public static string Colorize(FormattableString fw)
+		public static string Colorize( FormattableString fw )
 		{
 			var args = fw.GetArguments();
-			for (var i = 0; i < args.Length; i++)
-			{
+			for( var i = 0; i < args.Length; i++ ) {
 				switch( args[i] ) {
 					case ConsoleColor c:
 						args[i] = _map[c];
@@ -41,7 +40,24 @@ namespace Ansi {
 						break;
 				}
 			}
-			return string.Format(fw.Format, args);
+			return string.Format( fw.Format, args );
+		}
+
+		public static string StripColors( FormattableString fw )
+		{
+			var args = fw.GetArguments();
+			for( var i = 0; i < args.Length; i++ ) {
+				switch( args[i] ) {
+					case ConsoleColor _:
+						args[i] = string.Empty;
+						break;
+
+					case AnsiColor _:
+						args[i] = string.Empty;
+						break;
+				}
+			}
+			return string.Format( fw.Format, args );
 		}
 	}
 }
