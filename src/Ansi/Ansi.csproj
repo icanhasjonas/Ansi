@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <Title>Ansi Extensions for StringBuilder</Title>
@@ -7,6 +7,8 @@
     <Authors>Jonas Frost</Authors>
     <Company>Bombsquad Inc</Company>
     <Product />
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
     <Description>Simple StringBuilder extensions for adding ansi escape sequences</Description>
     <PackageTags>StringBuilder Ansi Extension Color</PackageTags>
     <Copyright>© Bombsquad Inc 2017</Copyright>
@@ -15,7 +17,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/icanhasjonas/Ansi</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
+    <PackageReleaseNotes>Updated repo URLs</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
