@@ -45,6 +45,11 @@ namespace Ansi {
 		public static StringBuilder EraseLineToCursor( this StringBuilder b ) => b.Escape().Append( "[1K" );
 		public static StringBuilder EraseLineFromCursor( this StringBuilder b ) => b.Escape().Append( "[0K" );
 
+		public static StringBuilder SetMode( this StringBuilder b, Mode mode ) => b
+			.Escape()
+			.Append( '[' )
+			.Append( (int)mode )
+			.Append( 'm' );
 
 		public static StringBuilder SetMode( this StringBuilder b, params Mode[] modes ) => b
 			.Escape()
