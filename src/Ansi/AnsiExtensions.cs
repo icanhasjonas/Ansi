@@ -84,5 +84,7 @@ namespace Ansi {
 
 		public static StringBuilder ScrollRegionUp( this StringBuilder b, int count = 1 ) => b.AnsiEscapePrefix( count ).Append( 'S' );
 		public static StringBuilder ScrollRegionDown( this StringBuilder b, int count = 1 ) => b.AnsiEscapePrefix( count ).Append( 'T' );
+
+		public static StringBuilder Blink( this StringBuilder b ) => b.SetMode( Mode.Blink );
 	}
 }

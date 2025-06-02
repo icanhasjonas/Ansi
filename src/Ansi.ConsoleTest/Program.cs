@@ -27,6 +27,8 @@ namespace Ansi.ConsoleTest {
 					.SetMode( Mode.Bold )
 					.SetForegroundColor( color )
 					.Append( "WORLD" )
+					.Blink()
+					.Append( " BLINK!" )
 				);
 				Thread.Sleep( 25 );
 			}
